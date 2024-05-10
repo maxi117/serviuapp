@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<style>
+  th {
+    white-space: nowrap;
+  }
+</style>
+<h1>Lista de proyectos Subsidio DS49</h1>
+<div class="table-responsive">
+  {% if subsidios %}
+  <table class="table table-striped mt-4">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Decreto</th>
+        <th scope="col">Año ejecución</th>
+        <th scope="col">Mes de pago</th>
+        <th scope="col">Año programa</th>
+        <th scope="col">Tipo programa</th>
+        <th scope="col">Alternativa</th>
+        <th scope="col">Tipo proyecto</th>
+        <th scope="col">Incremento</th>
+        <th scope="col">Región</th>
+        <th scope="col">Provincia</th>
+        <th scope="col">Comuna</th>
+        <th scope="col">Código / Rut proyecto-grupo-beneficiario</th>
+        <th scope="col">Nombre proyecto/Beneficiario</th>
+        <th scope="col">Sistema utilizado</th>
+        <th scope="col">Resolución Asignación Subsidios</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Unidad</th>
+        <th scope="col">UF</th>
+        <th scope="col">Valor $ UF utilizado</th>
+        <th scope="col">$</th>
+        <th scope="col">M$</th>
+        <th scope="col">Observación</th>
+        <th scope="col">N° Resol. de pago</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">N° AP o RPM</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">RUT Beneficiario</th>
+        <th scope="col">DV</th>
+        <th scope="col">Número de giro</th>
+        <th scope="col">%Avance / Cuota</th>
+        <th scope="col">Ahorro</th>
+        <th scope="col">Nombre constructora / vendedor</th>
+        <th scope="col">RUT constructora / vendedor</th>
+        <th scope="col">DV</th>
+        <th scope="col">Nombre Mandante</th>
+        <th scope="col">Rut Mandante</th>
+        <th scope="col">DV</th>
+        <th scope="col">Ejec. de Pago</th>
+        <th scope="col">N° Ingreso OFPA</th>
+        <th scope="col">Fecha Ingreso a PPEPS</th>
+        <th scope="col">Caja semana</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sub in subsidios %}
+      <tr>
+          <th scope="row">{{ sub.id }}</th>
+          <td>{{ sub.decreto }}</td>
+          <td>{{ sub.ano_ejecucion }}</td>
+          <td>{{ sub.mes_pago }}</td>
+          <td>{{ sub.ano_programa }}</td>
+          <td>{{ sub.tipo_programa }}</td>
+          <td>{{ sub.alternativa }}</td>
+          <td>{{ sub.tipo_proyecto }}</td>
+          <td>{{ sub.incremento }}</td>
+          <td>{{ sub.region }}</td>
+          <td>{{ sub.provincia }}</td>
+          <td>{{ sub.comuna }}</td>
+          <td>{{ sub.codigo_rut_proyecto_grupo_beneficiario }}</td>
+          <td>{{ sub.nombre_proyecto_beneficiario }}</td>
+          <td>{{ sub.sistema_utilizado }}</td>
+          <td>{{ sub.resolucion_asignacion_subsidios }}</td>
+          <td>{{ sub.fecha }}</td>
+          <td>{{ sub.unidad }}</td>
+          <td>{{ sub.uf }}</td>
+          <td>{{ sub.valor_uf_utilizado }}</td>
+          <td>{{ sub.valor }}</td>
+          <td>{{ sub.valor_miles }}</td>
+          <td>{{ sub.observacion }}</td>
+          <td>{{ sub.num_resolucion_pago }}</td>
+          <td>{{ sub.fecha_resolucion_pago }}</td>
+          <td>{{ sub.num_ap_rpm }}</td>
+          <td>{{ sub.fecha_ap_rpm }}</td>
+          <td>{{ sub.rut_beneficiario }}</td>
+          <td>{{ sub.dv }}</td>
+          <td>{{ sub.num_giro }}</td>
+          <td>{{ sub.porcentaje_avance_cuota }}</td>
+          <td>{{ sub.ahorro }}</td>
+          <td>{{ sub.nombre_constructora_vendedor }}</td>
+          <td>{{ sub.rut_constructora_vendedor }}</td>
+          <td>{{ sub.dv_constructora_vendedor }}</td>
+          <td>{{ sub.nombre_mandante }}</td>
+          <td>{{ sub.rut_mandante }}</td>
+          <td>{{ sub.dv_mandante }}</td>
+          <td>{{ sub.ejecucion_pago }}</td>
+          <td>{{ sub.num_ingreso_ofpa }}</td>
+          <td>{{ sub.fecha_ingreso_ppeps }}</td>
+          <td>{{ sub.caja_semana }}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  {% else %}
+  <h4>No hay subsidios</h4>
+  {% endif %}
+</div>
+<a href="/crear">Agregar subsidio</a>
+{% endblock %}
