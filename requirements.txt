@@ -1,8 +1,7 @@
 asgiref==3.8.1
 chardet==5.2.0
-Django==5.0.6
+Django==3.2.24  # Versión compatible con Python < 3.10
 gunicorn==22.0.0
-lml==0.1.0
 mysqlclient==2.2.4
 packaging==24.0
 pyexcel-io==0.6.6
