@@ -81,10 +81,11 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME' : 'serviuapp',
+        'NAME' : 'railway',
         'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'PASSWORD': 'jLVKrEigkwFlDVvUybGGwwddXbXPUSvG',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '45651'
     }
 }
 
