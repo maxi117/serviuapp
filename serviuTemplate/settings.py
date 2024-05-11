@@ -26,14 +26,14 @@ SECRET_KEY = 'django-insecure-y3n04nas&1(&)ddo8a*@^lc7=$h(9f9u&=tedv%3nb0+cd-8xc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['']
 
 # Otros ajustes de configuración...
 
-#CSRF_TRUSTED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
-#CSRF_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
-#CORS_ORIGINS_WHITELIST = ['https://serviuapp-production.up.railway.app/']
-#CORS_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
+CSRF_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
+CORS_ORIGINS_WHITELIST = ['https://serviuapp-production.up.railway.app/']
+CORS_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
 
 # Más ajustes de configuración...
 
