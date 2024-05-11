@@ -6,7 +6,9 @@ lml==0.1.0
 packaging==24.0
 pyexcel-io==0.6.6
 PyMySQL==1.1.0
+setuptools==69.5.1
 sqlparse==0.5.0
 texttable==1.7.0
 tzdata==2024.1
+wheel==0.43.0
 XlsxWriter==3.2.0
