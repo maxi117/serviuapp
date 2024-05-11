@@ -30,10 +30,10 @@ ALLOWED_HOSTS = ['*']
 
 # Otros ajustes de configuración...
 
-CSRF_TRUSTED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
-CSRF_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
-CORS_ORIGINS_WHITELIST = ['https://serviuapp-production.up.railway.app/']
-CORS_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://serviuapp-production.up.railway.app/crear/']
+CSRF_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/crear/']
+CORS_ORIGINS_WHITELIST = ['https://serviuapp-production.up.railway.app/crear/']
+CORS_ALLOWED_ORIGINS = ['https://serviuapp-production.up.railway.app/crear/']
 
 # Más ajustes de configuración...
 
