@@ -4,6 +4,7 @@ from serviuApp.forms import CreateSubsidioForm
 from serviuApp.models import Subsidio
 
 # Create your views here.
+@csrf_exempt
 def index(request):
     subsidios = Subsidio.objects.all()
     data = {'subsidios': subsidios}
