@@ -1,10 +1,64 @@
 {% extends "base.html" %}
 
 {% block contenido %}
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Guardar">>
-</form>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.id.label_tag }} {{ form.id }}
+    {{ form.decreto.label_tag }} {{ form.decreto }}
+    {{ form.ano_ejecucion.label_tag }} {{ form.ano_ejecucion }}
+    {{ form.mes_pago.label_tag }}
+    <select name="mes_pago">
+      <option value="Enero">Enero</option>
+      <option value="Febrero">Febrero</option>
+      <option value="Marzo">Marzo</option>
+      <option value="Abril">Abril</option>
+      <option value="Mayo">Mayo</option>
+      <option value="Junio">Junio</option>
+      <option value="Julio">Julio</option>
+      <option value="Agosto">Agosto</option>
+      <option value="Septiembre">Septiembre</option>
+      <option value="Octubre">Octubre</option>
+      <option value="Noviembre">Noviembre</option>
+      <option value="Diciembre">Diciembre</option>
+    </select>
+    {{ form.ano_programa.label_tag }} {{ form.ano_programa }}
+    {{ form.tipo_programa.label_tag }} {{ form.tipo_programa }}
+    {{ form.alternativa.label_tag }} {{ form.alternativa }}
+    {{ form.tipo_proyecto.label_tag }} {{ form.tipo_proyecto }}
+    {{ form.incremento.label_tag }} {{ form.incremento }}
+    {{ form.region.label_tag }} {{ form.region }}
+    {{ form.provincia.label_tag }} {{ form.provincia }}
+    {{ form.comuna.label_tag }} {{ form.comuna }}
+    {{ form.codigo_rut_proyecto_grupo_beneficiario.label_tag }} {{ form.codigo_rut_proyecto_grupo_beneficiario }}
+    {{ form.nombre_proyecto_beneficiario.label_tag }} {{ form.nombre_proyecto_beneficiario }}
+    {{ form.sistema_utilizado.label_tag }} {{ form.sistema_utilizado }}
+    {{ form.resolucion_asignacion_subsidios.label_tag }} {{ form.resolucion_asignacion_subsidios }}
+    {{ form.fecha.label_tag }} <input type="date" name="fecha" value="{{ form.fecha.value }}">
+    {{ form.unidad.label_tag }} {{ form.unidad }}
+    {{ form.uf.label_tag }} {{ form.uf }}
+    {{ form.valor_uf_utilizado.label_tag }} {{ form.valor_uf_utilizado }}
+    {{ form.valor.label_tag }} {{ form.valor }}
+    {{ form.valor_miles.label_tag }} {{ form.valor_miles }}
+    {{ form.observacion.label_tag }} {{ form.observacion }}
+    {{ form.num_resolucion_pago.label_tag }} {{ form.num_resolucion_pago }}
+    {{ form.fecha_resolucion_pago.label_tag }} {{ form.fecha.label_tag }} <input type="date" name="fecha_resolucion_pago" value="{{ form.fecha_resolucion_pago.value }}">
+    {{ form.num_ap_rpm.label_tag }} {{ form.num_ap_rpm }}
+    {{ form.fecha_ap_rpm.label_tag }} <input type="date" name="fecha_ap_rpm" value="{{ form.fecha_ap_rpm.value }}">
+    {{ form.rut_beneficiario.label_tag }} {{ form.rut_beneficiario }}
+    {{ form.dv.label_tag }} {{ form.dv }}
+    {{ form.num_giro.label_tag }} {{ form.num_giro }}
+    {{ form.porcentaje_avance_cuota.label_tag }} {{ form.porcentaje_avance_cuota }}
+    {{ form.ahorro.label_tag }} {{ form.ahorro }}
+    {{ form.nombre_constructora_vendedor.label_tag }} {{ form.nombre_constructora_vendedor }}
+    {{ form.rut_constructora_vendedor.label_tag }} {{ form.rut_constructora_vendedor }}
+    {{ form.dv_constructora_vendedor.label_tag }} {{ form.dv_constructora_vendedor }}
+    {{ form.nombre_mandante.label_tag }} {{ form.nombre_mandante }}
+    {{ form.rut_mandante.label_tag }} {{ form.rut_mandante }}
+    {{ form.dv_mandante.label_tag }} {{ form.dv_mandante }}
+    {{ form.ejecucion_pago.label_tag }} {{ form.ejecucion_pago }}
+    {{ form.num_ingreso_ofpa.label_tag }} {{ form.num_ingreso_ofpa }}
+    {{ form.fecha_ingreso_ppeps.label_tag }} <input type="date" name="fecha_ingreso_ppeps" value="{{ form.fecha_ingreso_ppeps.value }}">
+    {{ form.caja_semana.label_tag }} {{ form.caja_semana }}
+    <input type="submit" value="Guardar">
+  </form>
 {% endblock %}
-
